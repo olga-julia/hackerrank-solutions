@@ -18,7 +18,4 @@ function bonAppetit(bill: number[], k: number, b: number): void {
 const bill = [3, 10, 2, 9]
 const k = 1
 const b = 12
-const mostra = bonAppetit(bill, k, b)
-
-
-//console.log
+bonAppetit(bill, k, b)
