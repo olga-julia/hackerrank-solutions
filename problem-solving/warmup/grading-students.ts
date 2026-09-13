@@ -1,9 +1,20 @@
 function gradingStudents(grades: number[]): number[] {
 
-    const roundGrades = grades.map((n) => (grades[n]))
+    const roundedGrades = []
 
+    for (const grade of grades) {
+        if (grade < 38) {
+            roundedGrades.push(grade)
+            continue
+        }
 
-    return roundGrades
+        const rest = grade % 5
+        const difference = 5 - rest
+        const rounded = difference < 3 ? grade + difference : grade
+        roundedGrades.push(rounded)
+    }
+
+    return roundedGrades
 
 }
 
@@ -12,5 +23,3 @@ const result = gradingStudents(grades)
 
 console.log(result)
 
-
-//se 
