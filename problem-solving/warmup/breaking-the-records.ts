@@ -3,9 +3,15 @@ function breakingRecords(scores: number[]): number[] {
     let maxScore = [scores[0]]
     let minScore = [scores[0]]
 
+    console.log(maxScore)
+
+
     for (let i = 0; i < scores.length; i++) {
         if (scores[i] > maxScore[maxScore.length - 1]) {
             maxScore.push(scores[i])
+            console.log(scores[i])
+            console.log(maxScore[maxScore.length - 1])
+            //console.log(maxScore.length)
         }
 
         if (scores[i] < minScore[minScore.length - 1]) {
@@ -13,7 +19,7 @@ function breakingRecords(scores: number[]): number[] {
         }
 
     }
-
+    console.log(maxScore)
     return [maxScore.length - 1, minScore.length - 1]
 
 }
